@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<script>
+    function calculaImc(peso, altura) {
+        return imc = peso / (altura * altura)
+    }
+    var nome = prompt("digite seu nome ");
+    var peso = prompt(nome + ", digite seu peso ");
+    var altura = prompt(nome + ", digite sua altura");
+
+    var imc = calculaImc(peso, altura);
+    document.write(nome + ", seu IMC é " + imc);
+    document.write("<br><br>");
+
+    if (imc < 18.5) {
+        document.write("Você está abaixo do peso recomendado ");
+    }
+    if (imc >= 18.5 && imc <= 24.9) {
+        document.write("Você está com seu peso normal segundo a OMS");
+    }
+    if (imc >= 25 && imc <= 29.9) {
+        document.write("Você está com sobrepeso, procure um nutricionista.");
+    }
+    if (imc >= 30 && imc <= 34.9) {
+        document.write("Você está com obesidade grau 1, procure um nutricionista para ajudá-lo.");
+    }
+    if (imc <= 35 && imc >= 39.9) {
+        document.write("Você está com obesidade grau 2, procure um nutricionista pata ajudá-lo");
+    }
+    if (imc >= 35) {
+        document.write("Você está com obesidade mórbida, procure um nutricionista e um médico para ajudá-lo");
+    }
+</script>
